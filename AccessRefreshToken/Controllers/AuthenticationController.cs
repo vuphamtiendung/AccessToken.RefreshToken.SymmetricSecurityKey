@@ -61,7 +61,7 @@ namespace AccessRefreshToken.Controllers
 
             // Revoke old refresh token
             storeRefreshToken.isRevoke = true;
-            _redisCacheServices.SetCacheData(newRefreshToken, storeRefreshToken, TimeSpan.FromMinutes(30));
+            _redisCacheServices.SetCacheData(tokenModel.RefreshToken, storeRefreshToken, TimeSpan.FromMinutes(30));
 
             // Create new refresh token
             var refreshTokenModel = new RefreshTokenModel
