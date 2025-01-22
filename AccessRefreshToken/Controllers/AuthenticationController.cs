@@ -71,7 +71,6 @@ namespace AccessRefreshToken.Controllers
                 Expiration = DateTime.UtcNow.AddDays(5),
                 isRevoke = false
             };
-            storeRefreshToken.isRevoke = true;
             _redisCacheServices.SetCacheData(newRefreshToken, refreshTokenModel, TimeSpan.FromMinutes(30));
             _loggingServices.LogInfor("Refresh token had been create success");
             return base.Ok(new TokenModel
