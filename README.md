@@ -1,4 +1,4 @@
-1. Demo tính năng AcessToken và RefreshToken, sử dụng khoá đối xứng SymmetricSecurityKey
+1. Demo tính năng AccessToken và RefreshToken, sử dụng khoá đối xứng SymmetricSecurityKey
 - **Mô tả**: 
   + Khi user đăng nhập, server cấp 1 cặp AccessToken và RefreshToken cho client, AccessToken có Expiretime khoảng 60 giây nhằm demo tính năng RefreshToken.
   + RefreshToken được lưu vào Redis Cache nhằm cấp lại AccessToken mới và RefreshToken mới.
